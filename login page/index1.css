@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 200;
+    color: white;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.background {
+    background-image: linear-gradient(0deg, rgba(7, 25, 48, 0.5), rgba(0, 36, 77, .5));
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.login {
+    height: 70vh;
+    text-align: center;
+    background-color: rgb(36, 74, 99);
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text-form {
+    padding: 5% 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-form a {}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 12% 0;
+    justify-content: center;
+    align-items: center;
+}
+
+form input:nth-child(1) {
+    margin: 10% 0;
+}
+
+form input:nth-child(2) {}
+
+form input {
+    padding: 5% 10%;
+    width: 100%;
+    margin: 2%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgba(30, 66, 79, 0.816);
+    font-size: 1rem;
+
+}
+
+form input:focus {
+    outline: none;
+}
+
+form i {
+    margin-right: 4%;
+}
+
+.icon-input {
+    display: flex;
+    align-items: center;
+}
+
+.icon-input:nth-child(1) {
+    /* margin: 5% 0; */
+}
+
+.icon-input:nth-child(2) {
+    /* margin: 8% 0; */
+}
+
+.submitbtn {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin: 10%;
+    font-weight: 400;
+    font-size: 1rem;
+    color: black;
+    padding: 2% 0;
+    cursor: pointer;
+    border: solid 1px rgb(255, 255, 255);
+}
+
+.submitbtn:hover {
+    background-color: transparent;
+    border: solid 1px rgb(255, 255, 255);
+    color: white;
+}

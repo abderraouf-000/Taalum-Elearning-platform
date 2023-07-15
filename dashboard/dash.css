@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;1,100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --display-var-home: none;
+    --display-var-Todo-list: none;
+    --display-var-Settings: none;
+    --display-var-Time-table: none;
+    --display-var-delete-menu: none;
+    --night-blue: rgb(10, 34, 49);
+    --display-var-statistics: none;
+    --proj-color: rgb(193, 211, 220);
+    --grey: rgba(218, 218, 218, 0.4);
+    --light-blue: rgb(1, 123, 185);
+    --font-kanit: font-family: 'Kanit', sans-serif;
+    --notification: '20';
+}
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+}
+
+#all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar {
+    z-index: 200;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    padding: 4% 3%;
+    background-color: rgba(34, 34, 34, 0.995);
+    flex-direction: column;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 100%;
+    position: sticky;
+}
+
+.serviceicon {
+    display: flex;
+    flex-direction: column;
+    margin: 70% 0;
+}
+
+.sidebar i {
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.icon {
+    color: white;
+    white-space: nowrap;
+    margin: 4.85vh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-bell {
+    font-size: 1.4rem;
+    margin-right: 2%;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.fa-bell::after {
+    content: var(--notification);
+    position: absolute;
+
+    left: -50%;
+    color: red;
+    /* top: -20%;
+    left: 50%; */
+    font-size: 0.5em;
+    /* font-size: 1.5rem; */
+}
+
+
+
+.icon i {
+    margin: 0 5%;
+}
+
+.displaynone {
+    display: none;
+}
+
+.displayblock {
+    display: block;
+}
+
+/*not clean but it makes sense : a way to click only border*/
+.home::after {
+    content: '';
+    position: absolute;
+    display: var(--display-var-home);
+    background-color: beige;
+    width: 4%;
+    height: 5%;
+    left: 0;
+}
+
+.Todo-list::after {
+    content: '';
+    position: absolute;
+    display: var(--display-var-Todo-list);
+    background-color: beige;
+    width: 4%;
+    height: 5%;
+    left: 0;
+}
+
+
+
+
+.Settings::after {
+    content: '';
+    position: absolute;
+    display: var(--display-var-Settings);
+    background-color: beige;
+    width: 4%;
+    height: 5%;
+    left: 0;
+}
+
+.statistics::after {
+    content: '';
+    position: absolute;
+    display: var(--display-var-statistics);
+    background-color: beige;
+    width: 4%;
+    height: 5%;
+    left: 0;
+}
+
+
+.Time-table::after {
+    content: '';
+    position: absolute;
+    display: var(--display-var-Time-table);
+    background-color: beige;
+    width: 4%;
+    height: 5%;
+    left: 0;
+}
+
+.welcome {
+    color: black;
+    text-align: center;
+}
+
+.homesection {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+header {
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 850px) {
+
+    header {
+        display: flex;
+        background-color: whitesmoke;
+        justify-content: space-around;
+        align-items: center;
+        justify-content: center;
+        /* width: 50vw; */
+        position: fixed;
+        top: 50%;
+        right: 25%;
+        z-index: 100;
+        border-radius: 10px;
+    }
+
+    header .newprojectbtn :nth-child(1){
+        display: none;
+    }
+
+    header .searchbar input {
+        display: none;
+    }
+
+}
+
+
+
+header .searchbar i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 3%;
+    border-radius: 8px 8px 8px 8px;
+
+}
+
+header .searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 5%;
+
+}
+
+header .searchbar input {
+    border-radius: 8px 8px 8px 8px;
+    font-size: 1.2rem;
+    padding: 2%;
+    background-color: rgba(218, 218, 218, 0.4);
+}
+
+input:focus {
+    outline: none;
+
+}
+
+.newprojectbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 34, 49);
+    border-radius: 3px 3px 3px 3px;
+    padding: 1% 4%;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar .icon {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.projects .fa-square-minus {
+    z-index: 20;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    overflow: auto;
+    width: 70vw;
+    margin: 5%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    backdrop-filter: blur(30px);
+    background: rgb(193, 211, 220);
+    padding: 7% 1%;
+    display: flex;
+    line-height: 150%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 2%;
+    border-radius: 8px;
+    height: 15vh;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.project progress {
+    border-radius: 8px;
+    height: .3em;
+}
+
+/* ////////////// */
+.project .fa-ellipsis-vertical::after {
+    content: '-';
+    width: 3vw;
+    background-color: white;
+    max-width: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    height: 5vh;
+    font-size: 2rem;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 0;
+    transform: translate(10%, -10%);
+    text-align: center;
+    display: var(--display-var-delete-menu);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
+.project .progresspart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    padding-top: 4%;
+}
+
+.project .fa-ellipsis-vertical {
+    position: absolute;
+    right: 6%;
+    top: 6%;
+    cursor: pointer;
+}
+
+
+
+.taskstatistic {
+    padding: 8% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tasks-container {
+    width: 40vw;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 0 0;
+
+}
+
+.tasks {
+    padding: 4%;
+}
+
+.task {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    line-height: 150%;
+    box-shadow: rgba(122, 122, 122, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    padding: 3%;
+    margin: 5% 0;
+    /* border: solid 1px rgb(180, 180, 180); */
+}
+
+.task i {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+}
+
+.task .fa-square {}
+
+.widgets {
+    display: flex;
+    gap: 4%;
+
+}
+
+.stats {
+    padding: 5%;
+    border-radius: 8px;
+    background-color: var(--light-blue);
+}
+
+.stats .widget {
+    margin-top: 5%;
+    border-radius: 7px;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.taskstatistic .optional {
+    background-color: rgb(90, 90, 90);
+    margin: 4%;
+
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60rem;
+    background-color: #f3f3f3;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+
+.setting-model a {
+    color: white;
+}
+
+
+
+
+.setting-model .logout {
+    padding: 5% 0;
+}
+
+
+
+.setting-model {
+    position: fixed;
+    line-height: 5vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    transition: all 0.5s;
+}
+
+.modal__header {
+    font-size: 1rem;
+    margin-bottom: 4.5rem;
+    line-height: 1.5;
+}
+
+.modal__form {
+    margin: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.modal__form label {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.modal__form input {
+    font-size: 1rem;
+    padding: .4rem .6rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.modal__form button {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: 1rem;
+    padding: 2% 4%;
+    cursor: pointer;
+}
+
+
+.btn--close {
+    font-family: inherit;
+    color: inherit;
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    font-size: 4rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.btn--close-modal {
+    font-family: inherit;
+    color: inherit;
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    font-size: 4rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#myChart {
+    background-color: var(--proj-color);
+    border-radius: 8px;
+}
+
+
+#Time-table {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    min-width: 0;
+}
+
+#Time-table .tablebody .timeheader {
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#Time-table .tablemenu {
+    display: flex;
+    flex-direction: column;
+}
+
+#Time-table .tablemenu [type="color"] {
+    width: 10%;
+    height: 20px;
+}
+
+#Time-table .tablemenu form {
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+}
+
+#Time-table .tablemenu [type="text"] {
+    border-bottom: solid 1px black;
+}
+
+
+
+
+
+#Time-table .tablemenu #table-categorie {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-header span {
+    padding: 0% 5%;
+    font-size: 1.4rem;
+    /* background-color: var(--night-blue); */
+    color: var(--night-blue);
+    cursor: pointer;
+}
+
+.categorie {
+    display: flex;
+    align-items: center;
+    padding: 3% 10%;
+    gap: 7%;
+    font-family: var(--font-kanit);
+}
+
+.categorie i {
+    color: var(--light-blue);
+    padding: 0;
+}
+
+.categorie h4 {
+    font-family: var(--font-kanit);
+    font-weight: 200;
+}
+
+.tablebody {
+    background-color: var(--grey);
+
+}
+
+.btnhead {
+    /* display: flex; */
+    display: flex;
+    width: 5%;
+    margin: 0 10%;
+    /* flex-wrap: wrap; */
+    /* gap: 30%; */
+}
+
+.btnhead button {
+    background-color: var(--night-blue);
+    color: white;
+    padding: 30%;
+    cursor: pointer;
+    margin: 2% 4%;
+    border-radius: 0px;
+}
+
+
+.tablebody .body ul {
+    display: grid;
+    grid-template-columns: repeat(8, calc(100%/8));
+    text-align: center;
+    margin: 2%;
+}
+
+
+.tablebody .body .add-row {
+    background-color: transparent;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.tablebody .body li:hover {
+    background-color: rgb(135, 204, 204);
+}
+
+.taskcontainerclick {
+    background-color: rgb(135, 204, 204);
+
+}
+
+
+.tablebody .body li {
+    background-color: rgb(175, 175, 175);
+    position: relative;
+    font-family: var(--font-kanit);
+    padding: 20% 10%;
+    font-weight: 600;
+    font-size: .9rem;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4%;
+    margin: 0%;
+}
+
+.tablebody h3 {
+    font-family: var(--font-kanit);
+    font-weight: 300;
+    margin-left: 10%;
+}
+
+.notification-modal {
+    position: absolute;
+    width: 30vw;
+    background-color: var(--night-blue);
+    top: 110%;
+    left: 52%;
+    height: 35vh;
+    border-radius: 10px;
+    padding: 1.4% 2%;
+    display: none;
+}
+
+.notification-modal h3 {
+    font-family: var(--font-kanit);
+    font-weight: 400;
+
+}
+
+.createTaskModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 10%;
+    width: 100%;
+}
+
+.createTaskModal form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.createTaskModal form input {
+    width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+    .projects {
+        flex-wrap: wrap;
+    }
+
+    .taskstatistic {
+        grid-template-columns: 1fr;
+    }
+
+    /* 
+    .btnhead {
+        display: flex;
+        flex-wrap: wrap;
+        /* gap: 30%; */
+}
+
+
+
+.todo-list {
+    margin: 2%;
+}
+
+.todo-list .todo-header {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list .todo-header form {
+    display: flex;
+    /* background-color: blue; */
+    margin: 4% 0;
+    position: relative;
+}
+
+.todo-list .todo-header form input[type="text"] {
+    width: 40vw;
+    padding: 1%;
+    /* margin: 01%; */
+}
+
+.todo-list .todo-header form select {
+    width: 5vw;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+}
+
+.todo-list .todo-header form input[type="datetime-local"] {
+    width: 10vw;
+    position: absolute;
+    right: 00%;
+    top: 30%;
+}
+
+
+
+.todo-list .todo-header button {
+    display: flex;
+    padding: 3% 3%;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--night-blue);
+}
+
+.todo-list .Texthead i {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.todo-list .Texthead {
+    display: inline-flex;
+}
+
+.todo-list .incompleted-tasks .todo-incompleted-task {
+    display: flex;
+    background-color: var(--grey);
+    position: relative;
+    width: 40%;
+    flex-direction: column;
+    margin: 3% 5%;
+    padding: 1% 2%;
+    color: rgb(0, 0, 0);
+    border-left: solid 10px var(--light-blue);
+    background-color: white;
+    box-shadow: rgba(122, 122, 122, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+}
+
+.todo-list .incompleted-tasks .task-settings {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.todo-list .incompleted-tasks .task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list .incompleted-tasks .task-header i {
+    cursor: pointer;
+}
+
+.todo-list .allTasks {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.todo-list .incompleted-tasks .todo-incompleted-task .fa-trash {
+    position: absolute;
+    left: -15%;
+    top: +32%;
+    cursor: pointer;
+}

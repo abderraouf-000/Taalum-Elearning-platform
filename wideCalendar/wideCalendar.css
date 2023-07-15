@@ -1,0 +1,65 @@
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+
+ :root {
+     --extra-font: 'Source Sans Pro', sans-serif;
+     --btn-clr: rgb(250, 250, 250);
+     --btn-clr-hover: rgb(227, 227, 227);
+ }
+
+ .big-currentdate {
+     display: flex;
+     font-family: var(--extra-font);
+
+ }
+
+ .tablebody .big-calendar .big-calendar {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* border-bottom: 2px solid black; */
+     flex-wrap: wrap;
+ }
+
+
+
+
+ .tablebody .big-calbody .big-days {
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+ }
+
+ .active {
+     background-color: rgb(33, 131, 211);
+     color: white;
+ }
+
+ .tablebody .big-calbody li {
+     text-align: center;
+     font-size: 1.2rem;
+
+ }
+
+ .tablebody .big-calbody li:not(.daysname) {
+     cursor: pointer;
+     padding: 20px;
+     border: 1px black solid;
+ }
+
+
+ .tablebody .big-calendar i:hover {
+     background-color: var(--btn-clr-hover);
+
+ }
+
+ .tablebody .big-calendar {
+     /* border-bottom: solid 1px black; */
+     font-family: var(--extra-font);
+     /* background-color: rgb(145, 145, 145); */
+ }
+
+ .tablebody li {
+     list-style: none;
+
+ }
