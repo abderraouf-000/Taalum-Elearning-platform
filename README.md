@@ -6,14 +6,14 @@ this responsive web application will help students to manage their learning path
 ![Home Page](/HomePage2.png)
 ![Home Page](/HomePage3.png)
 ## Login Page
-![Home Page](/LoginPage.png)
+![Login Page image](/LoginPage.png)
 ## Sign up Page
-![Home Page](/SignUpPage.png)
+![Sign Up Page image](/SignUpPage.png)
 ## DashBoard Page
-![Home Page](/DashBoard1.png)
-![Home Page](/DashBoard2.png)
-![Home Page](/DashBoard3.png)
-![Home Page](/DashBoard4.png)
-![Home Page](/DashBoard5.png)
-![Home Page](/DashBoard6.png)
+![DashBoard Image Page](/DashBoard1.png)
+![DashBoard Image Page](/DashBoard2.png)
+![DashBoard Image Page](/DashBoard3.png)
+![DashBoard Image Page](/DashBoard4.png)
+![DashBoard Image Page](/DashBoard5.png)
+![DashBoard Image Page](/DashBoard6.png)
 
