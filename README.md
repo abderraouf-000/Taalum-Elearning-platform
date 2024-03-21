@@ -10,7 +10,7 @@ this responsive web application will help students to manage their learning path
 ## Sign up Page
 ![Sign Up Page image](/SignUpPage.png)
 ## DashBoard Page
-![DashBoard Image Page](/DashBoard1.png)
+![DashBoard Image Page](/Dashboard1.png)
 ![DashBoard Image Page](/DashBoard2.png)
 ![DashBoard Image Page](/DashBoard3.png)
 ![DashBoard Image Page](/DashBoard4.png)
